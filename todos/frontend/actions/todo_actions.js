@@ -1,0 +1,27 @@
+export const RECEIVE_TODOS = 'RECEIVE_TODOS';
+export const RECEIVE_TODO = 'RECEIVE_TODO';
+export const REMOVE_TODO = 'REMOVE_TODO';
+
+// Accepts array argument of todos
+export const receiveTodos = (todos) => {
+  return {
+    type: RECEIVE_TODOS,
+    todos
+  }
+}
+
+// Receives a single todo
+export const receiveTodo = (todo) => {
+  return {
+    type: RECEIVE_TODO,
+    todo
+  }
+}
+
+// either takes a single todo (with an id key) or an id
+export const removeTodo = (id) => {
+    return {
+    type: REMOVE_TODO,
+    id
+  }
+}
