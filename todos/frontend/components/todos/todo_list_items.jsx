@@ -11,6 +11,8 @@ class TodoListItem extends React.Component{
       detail: false,
     }
     this.toggleDetail = this.toggleDetail.bind(this)
+    this.showDetail = this.showDetail.bind(this)
+    this.renderList = this.renderList.bind(this)
   }
 
 
@@ -44,12 +46,14 @@ class TodoListItem extends React.Component{
   showDetail(){
     if (this.detail){
       return (
+        <>
         {this.renderList()}
         <TodoDetailView />
-      )
+        </>
+      );
     } else {
       return (
-        {this.renderList()}
+        this.renderList()
       )
     }
   }
