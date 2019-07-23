@@ -169,7 +169,8 @@ var fetchTodos = function fetchTodos() {
       return dispatch(receiveTodos(todos));
     });
   };
-};
+}; // Thunk action creator for createTodo
+
 var createTodo = function createTodo(todo) {
   return function (dispatch) {
     return _util_todo_api_util__WEBPACK_IMPORTED_MODULE_0__["createTodo"](todo).then(function (todo) {
@@ -180,7 +181,8 @@ var createTodo = function createTodo(todo) {
       return dispatch(Object(_error_actions__WEBPACK_IMPORTED_MODULE_1__["clearErrors"])());
     });
   };
-};
+}; // Thunk action creator for updateTodo
+
 var updateTodo = function updateTodo(todo) {
   return function (dispatch) {
     return _util_todo_api_util__WEBPACK_IMPORTED_MODULE_0__["updateTodo"](todo).then(function (todo) {
@@ -191,7 +193,8 @@ var updateTodo = function updateTodo(todo) {
       return dispatch(Object(_error_actions__WEBPACK_IMPORTED_MODULE_1__["clearErrors"])());
     });
   };
-};
+}; // Thunk action creator for deleteTodo
+
 var deleteTodo = function deleteTodo(todo) {
   return function (dispatch) {
     return _util_todo_api_util__WEBPACK_IMPORTED_MODULE_0__["deleteTodo"](todo).then(function (todo) {
@@ -264,32 +267,7 @@ var Root = function Root(_ref) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// import React from 'react';
-// class TodoDetailView extends React.Component{
-//   constructor(props){
-//     super(props)
-//     this.removeTodo = this.removeTodo.bind(this);
-//   }
-//   removeTodo() {
-//     this.props.removeTodo(this.props.todo.id);
-//   }
-//   render(){
-//     return (
-//       <ul>
-//         {this.props.todo.steps.map( (step, idx) => {
-//           <li className="step" key={idx}>
-//             <p>{step.title}-</p>
-//             <p>{step.done}</p>
-//             <button>Remove</button>
-//             <button>Change status</button>
-//           </li>
-//         })}
-//       </ul>
-//       <button onClick={this.props.removeTodo}>Remove Todo</button>
-//     );
-//     }
-// }
-// export default TodoDetailView;
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/aa/Desktop/W7D1/frontend/components/todos/todo_detail_view.jsx: JSX attributes must only be assigned a non-empty expression (27:28)\n\n\u001b[0m \u001b[90m 25 | \u001b[39m          \u001b[33m<\u001b[39m\u001b[33mli\u001b[39m key\u001b[33m=\u001b[39m{idx}\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 | \u001b[39m            {step\u001b[33m.\u001b[39mtitle}\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 | \u001b[39m            \u001b[33m<\u001b[39m\u001b[33mbutton\u001b[39m onClick\u001b[33m=\u001b[39m{}\u001b[33m>\u001b[39m{\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mbuttonStatus(step)}\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mbutton\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 | \u001b[39m            \u001b[33m<\u001b[39m\u001b[33mbutton\u001b[39m onClick\u001b[33m=\u001b[39m{\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mprops\u001b[33m.\u001b[39mdeleteStep(step)}\u001b[33m>\u001b[39m\u001b[33mDelete\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mbutton\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 29 | \u001b[39m          \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mli\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 30 | \u001b[39m        })}\u001b[0m\n    at Object.raise (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:6325:17)\n    at Object.jsxParseAttributeValue (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:3422:22)\n    at Object.jsxParseAttribute (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:3470:44)\n    at Object.jsxParseOpeningElementAfterName (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:3490:28)\n    at Object.jsxParseOpeningElementAt (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:3483:17)\n    at Object.jsxParseElementAt (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:3515:33)\n    at Object.jsxParseElementAt (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:3531:32)\n    at Object.jsxParseElement (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:3589:17)\n    at Object.parseExprAtom (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:3596:19)\n    at Object.parseExprSubscripts (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:8412:23)\n    at Object.parseMaybeUnary (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOps (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:8267:23)\n    at Object.parseMaybeConditional (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:8240:23)\n    at Object.parseMaybeAssign (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:8187:21)\n    at Object.parseExpression (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:8135:23)\n    at Object.parseStatementContent (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:9958:23)\n    at Object.parseStatement (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:9829:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:10405:25)\n    at Object.parseBlockBody (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:10392:10)\n    at Object.parseBlock (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:10376:10)\n    at Object.parseFunctionBody (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:9424:24)\n    at Object.parseArrowExpression (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:9365:10)\n    at Object.parseParenAndDistinguishExpression (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:9002:12)\n    at Object.parseExprAtom (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:8762:21)\n    at Object.parseExprAtom (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:3601:20)\n    at Object.parseExprSubscripts (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:8412:23)\n    at Object.parseMaybeUnary (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOps (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:8267:23)\n    at Object.parseMaybeConditional (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:8240:23)\n    at Object.parseMaybeAssign (/Users/aa/Desktop/W7D1/node_modules/@babel/parser/lib/index.js:8187:21)");
 
 /***/ }),
 
@@ -456,8 +434,8 @@ function (_React$Component) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_todo_list_items__WEBPACK_IMPORTED_MODULE_1__["default"], {
           key: i,
           todo: todo,
-          receiveTodo: _this.props.receiveTodo,
-          removeTodo: _this.props.removeTodo
+          updateTodo: _this.props.updateTodo,
+          deleteTodo: _this.props.deleteTodo
         });
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_todo_form__WEBPACK_IMPORTED_MODULE_2__["default"], {
         createTodo: this.props.createTodo
@@ -498,17 +476,17 @@ var mapStateToProps = function mapStateToProps(state) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    receiveTodo: function receiveTodo(todo) {
-      return dispatch(Object(_actions_todo_actions__WEBPACK_IMPORTED_MODULE_3__["receiveTodo"])(todo));
-    },
-    removeTodo: function removeTodo(id) {
-      return dispatch(Object(_actions_todo_actions__WEBPACK_IMPORTED_MODULE_3__["removeTodo"])(id));
-    },
     fetchTodos: function fetchTodos() {
       return dispatch(Object(_actions_todo_actions__WEBPACK_IMPORTED_MODULE_3__["fetchTodos"])());
     },
     createTodo: function createTodo(todo) {
       return dispatch(Object(_actions_todo_actions__WEBPACK_IMPORTED_MODULE_3__["createTodo"])(todo));
+    },
+    updateTodo: function updateTodo(todo) {
+      return dispatch(Object(_actions_todo_actions__WEBPACK_IMPORTED_MODULE_3__["updateTodo"])(todo));
+    },
+    deleteTodo: function deleteTodo(todo) {
+      return dispatch(Object(_actions_todo_actions__WEBPACK_IMPORTED_MODULE_3__["deleteTodo"])(todo));
     }
   };
 };
@@ -565,7 +543,8 @@ function (_React$Component) {
     _this.toggleDone = _this.toggleDone.bind(_assertThisInitialized(_this));
     _this.buttonStatus = _this.buttonStatus.bind(_assertThisInitialized(_this));
     _this.state = {
-      detail: false
+      detail: false,
+      steps: _this.props.fetchSteps(_assertThisInitialized(_this))
     };
     _this.toggleDetail = _this.toggleDetail.bind(_assertThisInitialized(_this));
     _this.showDetail = _this.showDetail.bind(_assertThisInitialized(_this));
@@ -578,7 +557,7 @@ function (_React$Component) {
     value: function toggleDone() {
       var newTodo = Object.assign({}, this.props.todo);
       newTodo.done = !newTodo.done;
-      this.props.receiveTodo(newTodo);
+      this.props.updateTodo(newTodo);
     }
   }, {
     key: "buttonStatus",
@@ -609,7 +588,7 @@ function (_React$Component) {
     key: "showDetail",
     value: function showDetail() {
       if (this.detail) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, this.renderList(), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_todo_detail_view__WEBPACK_IMPORTED_MODULE_1___default.a, null));
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, this.renderList());
       } else {
         return this.renderList();
       }
@@ -851,7 +830,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /*!****************************************!*\
   !*** ./frontend/util/todo_api_util.js ***!
   \****************************************/
-/*! exports provided: fetchTodos, createTodo, updateTodo, deleteTodo */
+/*! exports provided: fetchTodos, createTodo, updateTodo, deleteTodo, fetchSteps, createStep, deleteStep */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -860,6 +839,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createTodo", function() { return createTodo; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateTodo", function() { return updateTodo; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteTodo", function() { return deleteTodo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSteps", function() { return fetchSteps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createStep", function() { return createStep; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteStep", function() { return deleteStep; });
 var fetchTodos = function fetchTodos() {
   return $.ajax({
     type: "GET",
@@ -890,6 +872,29 @@ var deleteTodo = function deleteTodo(todo) {
   return $.ajax({
     type: "DELETE",
     url: "api/todos/".concat(id)
+  });
+};
+var fetchSteps = function fetchSteps(todo) {
+  var todo_id = todo.id;
+  return $.ajax({
+    type: "GET",
+    url: "api/todos/".concat(todo_id, "/steps")
+  });
+};
+var createStep = function createStep(todo, step) {
+  var todo_id = todo.id;
+  return $.ajax({
+    type: "POST",
+    url: "api/todos/".concat(todo_id, "/steps"),
+    data: {
+      step: step
+    }
+  });
+};
+var deleteStep = function deleteStep(step) {
+  return $.ajax({
+    type: "DELETE",
+    url: "api/steps/".concat(step.id)
   });
 };
 

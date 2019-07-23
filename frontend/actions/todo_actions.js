@@ -40,6 +40,7 @@ export const fetchTodos = () => {
   };
 }
 
+// Thunk action creator for createTodo
 export const createTodo = (todo) => {
   return dispatch => {
     return APIUtil.createTodo(todo)
@@ -52,6 +53,7 @@ export const createTodo = (todo) => {
   }
 };
 
+// Thunk action creator for updateTodo
 export const updateTodo = (todo) => {
   return dispatch => {
     return APIUtil.updateTodo(todo)
@@ -64,6 +66,7 @@ export const updateTodo = (todo) => {
   }
 }
 
+// Thunk action creator for deleteTodo
 export const deleteTodo = todo => {
   return dispatch => {
     return APIUtil.deleteTodo(todo)

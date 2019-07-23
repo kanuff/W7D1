@@ -33,3 +33,29 @@ export const deleteTodo = todo => {
     url: `api/todos/${id}`,
   })
 }
+
+export const fetchSteps = todo => {
+  const todo_id = todo.id;
+  return $.ajax({
+    type: "GET",
+    url: `api/todos/${todo_id}/steps`
+  })
+}
+
+export const createStep = (todo, step) => {
+  const todo_id = todo.id;
+  return $.ajax({
+    type: "POST",
+    url: `api/todos/${todo_id}/steps`,
+    data: {
+      step
+    }
+  })
+}
+
+export const deleteStep = (step) => {
+  return $.ajax({
+    type: "DELETE",
+    url: `api/steps/${step.id}`
+  })
+}

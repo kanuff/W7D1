@@ -9,18 +9,17 @@ class TodoListItem extends React.Component{
     this.buttonStatus = this.buttonStatus.bind(this);
     this.state = {
       detail: false,
+      steps: this.props.fetchSteps(this)
     }
     this.toggleDetail = this.toggleDetail.bind(this)
     this.showDetail = this.showDetail.bind(this)
     this.renderList = this.renderList.bind(this)
   }
 
-
-
   toggleDone() {
     const newTodo = Object.assign({}, this.props.todo);
     newTodo.done = !newTodo.done;
-    this.props.receiveTodo(newTodo);
+    this.props.updateTodo(newTodo);
   }
 
   buttonStatus(){
@@ -48,7 +47,6 @@ class TodoListItem extends React.Component{
       return (
         <>
         {this.renderList()}
-        <TodoDetailView />
         </>
       );
     } else {

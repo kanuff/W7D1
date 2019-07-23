@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.receiveTodos = receiveTodos;
   window.fetchTodos = fetchTodos;
   window.allTodos = allTodos;
+  
   const rootElement = document.getElementById('content');
   ReactDOM.render(<Root store={store}/>, rootElement);
 })
