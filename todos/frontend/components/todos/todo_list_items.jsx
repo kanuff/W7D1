@@ -61,7 +61,7 @@ class TodoListItem extends React.Component{
 
   render(){
     return (
-      {showDetail()}
+      this.showDetail()
     )
   }
 }
